@@ -277,6 +277,7 @@ GEM
       thread_safe (~> 0.1)
     unicode-display_width (1.4.0)
     uniform_notifier (1.11.0)
+    vidyo (1.0)
     webmock (3.4.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -324,10 +325,11 @@ DEPENDENCIES
   spring-commands-rspec
   spring-watcher-listen
   timecop
+  vidyo
   webmock
 
 RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.6
+   1.17.3
