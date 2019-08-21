@@ -21,6 +21,7 @@ gem "raddocs"
 gem "responders"
 gem "rollbar"
 gem "seedbank"
+gem "vidyo", "~> 1.0"
 
 group :development do
   gem "bullet"

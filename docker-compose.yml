@@ -20,6 +20,8 @@ services:
       - RACK_ENV
       - ROLLBAR_ACCESS_TOKEN
       - MAILER_SENDER_ADDRESS
+      - VIDYO_DEVELOPER_KEY
+      - VIDYO_APPLICATION_ID
     build:
       context: .
       args:
