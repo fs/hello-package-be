@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :room do
-    room_id { Faker::Blockchain::Bitcoin.address }
+    user
   end
 end

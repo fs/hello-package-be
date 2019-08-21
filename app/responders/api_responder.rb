@@ -6,8 +6,4 @@ class ApiResponder < ActionController::Responder
       display resource, status: :ok
     end
   end
-
-  def json_resource_errors
-    Error.new(code: :invalid_record, validations: resource.errors.messages)
-  end
 end

@@ -1,30 +1,22 @@
 module V1
   module Client
-    class RoomsController < ActionController::API
-      respond_to :json
-
+    class RoomsController < BaseController
       def create
-        room = CreateCall::Create.call(user_params).room
+        context = CreateRoom.call(user: current_user)
 
-        if room
-          render json: room, status: :created, meta: { token: token }, adapter: :json
+        if context.success?
+          render json: context.room, meta: meta, status: :created
         else
-          render json: room, status: 404
+          respond_with_error status: :unprocessable_entity, error: context.error
         end
       end
 
       private
 
-      def user_params
-        params.permit(:user_id)
-      end
-
-      def token
-        CreateCall::GenerateVidyoToken.call(user_id: user_id).token
-      end
-
-      def user_id
-        user_params[:user_id]
+      def meta
+        {
+          user_token: GenerateVidyoToken.call(user: current_user).token,
+        }
       end
     end
   end

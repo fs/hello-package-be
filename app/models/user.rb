@@ -5,5 +5,5 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }
   validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-  has_many :rooms, dependent: :destroy
+  has_one :room, dependent: :destroy
 end

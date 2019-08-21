@@ -325,7 +325,7 @@ DEPENDENCIES
   spring-commands-rspec
   spring-watcher-listen
   timecop
-  vidyo (~> 1.0)
+  vidyo
   webmock
 
 RUBY VERSION
