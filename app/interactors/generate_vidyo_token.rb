@@ -18,6 +18,6 @@ class GenerateVidyoToken
       application_id: ENV.fetch("VIDYO_APPLICATION_ID"),
       user_name: user_id,
       expires_in: TOKEN_TTL
-    )
+    ).serialize
   end
 end

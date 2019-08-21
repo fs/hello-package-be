@@ -11,6 +11,7 @@ describe GenerateVidyoToken do
 
     it "provides token" do
       expect(context.token).to be_present
+      expect(context.token).to be_a_kind_of(String)
     end
   end
 end

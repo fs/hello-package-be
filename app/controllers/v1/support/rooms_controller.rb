@@ -1,20 +1,22 @@
 module V1
   module Support
-    class RoomsController < ActionController::API
-      def index
-        @rooms = Room.includes(:user).all
+    class RoomsController < BaseController
+      expose :rooms, :fetch_rooms
 
-        render json: @rooms, each_serializer: RoomFullSerializer, meta: { token: token }, adapter: :json
+      def index
+        render json: rooms, each_serializer: V1::Support::RoomSerializer, meta: meta
       end
 
       private
 
-      def token
-        CreateCall::GenerateVidyoToken.call(user_id: current_user.id).token
+      def meta
+        {
+          support_token: GenerateVidyoToken.call(user: current_user).token
+        }
       end
 
-      def current_user
-        User.first
+      def fetch_rooms
+        Room.includes(:user).all
       end
     end
   end
