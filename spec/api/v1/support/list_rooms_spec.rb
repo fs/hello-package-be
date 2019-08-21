@@ -5,7 +5,7 @@ resource "Support Rooms" do
     before do
       allow(GenerateVidyoToken).to receive(:call)
         .with(user: current_user)
-        .and_return(double(:context, token: token))
+        .and_return(OpenStruct.new(token: token))
     end
 
     let(:token) { "vidyo-support-token" }

@@ -6,7 +6,7 @@ module V1
     private
 
     def respond_with_error(status: :internal_server_error, error:)
-      render json: { error: error } , status: :status
+      render json: { error: error }, status: status
     end
 
     def current_user

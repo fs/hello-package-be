@@ -5,7 +5,7 @@ resource "Client Rooms" do
     before do
       allow(GenerateVidyoToken).to receive(:call)
         .with(user: user)
-        .and_return(double(:context, token: token))
+        .and_return(OpenStruct.new(token: token))
     end
 
     let(:token) { "vidyo-user-token" }

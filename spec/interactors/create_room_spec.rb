@@ -2,6 +2,7 @@ require "rails_helper"
 
 describe CreateRoom do
   subject(:context) { described_class.call(user: user) }
+
   let(:user) { create(:user) }
 
   describe ".call" do

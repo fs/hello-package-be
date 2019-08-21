@@ -15,7 +15,7 @@ module V1
 
       def meta
         {
-          user_token: GenerateVidyoToken.call(user: current_user).token,
+          user_token: GenerateVidyoToken.call(user: current_user).token
         }
       end
     end

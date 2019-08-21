@@ -13,7 +13,7 @@ class GenerateVidyoToken
   private
 
   def create_token
-    @token ||= Vidyo::Token.new(
+    Vidyo::Token.new(
       key: ENV.fetch("VIDYO_DEVELOPER_KEY"),
       application_id: ENV.fetch("VIDYO_APPLICATION_ID"),
       user_name: user_id,
