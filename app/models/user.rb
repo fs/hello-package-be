@@ -4,4 +4,6 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :password, length: { minimum: 6 }
   validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+
+  has_many :rooms, dependent: :destroy
 end
