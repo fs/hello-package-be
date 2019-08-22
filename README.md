@@ -1,7 +1,7 @@
 ## Hello Package BE
 
 ## Project description
-API on RubyOnRails for creating conferences using vidyo.io 
+API on RubyOnRails for creating conferencies using vidyo.io 
 ## Dependencies
 
 * Postgresql 11.2
