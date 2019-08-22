@@ -1,9 +1,7 @@
-## Project name
-
-[![Semaphore](https://semaphoreapp.com/api/v1/projects/0e00006725dcea00b179fab81a1b1bdaf9a64816/106819/shields_badge.png)](https://semaphoreapp.com/fs/rails-base-api)
+## Hello Package BE
 
 ## Project description
-
+API on RubyOnRails for creating conferences using vidyo.io 
 ## Dependencies
 
 * Postgresql 11.2
@@ -25,19 +23,7 @@
 * `docker-compose exec app bin/quality` - runs rubocop, brakeman, and bundle-audit
 * `docker-compose exec app bin/doc` - generates API documentation
 
-
-## Documentation & Examples
-
-Where is documentation and examples (e.g. `./docs`)?
-
-## Continuous Integration
-
-CI service info and status (if available).
-Add a link to a project page on [Semaphore](http://semaphoreapp.com).
-
 ## Staging
 
-Location and other info about staging servers.
-
-## Production
+deployed to [Heroku](https://fsconferenceapp.herokuapp.com/)
 
